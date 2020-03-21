@@ -1,0 +1,24 @@
+{
+  "valores": [
+    {
+      "id": 1,
+      "numero": 10,
+      "divisores": [
+        1,
+        2,
+        5,
+        10
+      ],
+      "primo": false
+    },
+    {
+      "numero": 3,
+      "primo": true,
+      "divisores": [
+        1,
+        3
+      ],
+      "id": 2
+    }
+  ]
+}
