@@ -13,7 +13,7 @@ export default props =>
         </nav>
         <nav className="menu">
             <NavItem href="/" classIcon="fa fa-home" title="Home"/>
-            <NavItem href="/" classIcon="fa fa-home" title="Desafio"/>
-            <NavItem href="/sobre" classIcon="fa fa-home" title="Autor"/>
+            <NavItem href="/desafio" classIcon="fa fa-home" title="Desafio"/>
+            <NavItem href="/autor" classIcon="fa fa-home" title="Autor"/>
         </nav>
     </header>
