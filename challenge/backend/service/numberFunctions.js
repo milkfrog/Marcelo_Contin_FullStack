@@ -1,3 +1,17 @@
+function verifyNumber(value) {
+    /**
+     * input: integer 
+     * output: object
+     */
+    let array = dividers(value)
+    let flag = isPrime(array)
+    return {
+        "number": value,
+        "dividers": array,
+        "prime": flag
+    }
+}
+
 function dividers(value) {
     /**
      * input: integer 
@@ -22,4 +36,4 @@ function isPrime(array) {
     return !(array.length > 2)
 }
 
-module.exports = {dividers, isPrime}
+module.exports = {verifyNumber}
