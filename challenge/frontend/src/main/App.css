@@ -1,7 +1,7 @@
 :root {
     --logo-menu-height: 100px;
     --logo-width: 225px;
-    --footer-height: 60px;
+    --footer-height: 80px;
 
     --shadow:
         0 2px 23px 0 rgba(0, 0, 0, 0.1),
@@ -16,17 +16,13 @@
 .app {
     margin: 0px;
     display: grid;
-    grid-template-columns: var(--logo-width) 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: var(--logo-menu-height) 1fr var(--footer-height);
     grid-template-areas:
-        "logo header"
-        "content content"
-        "footer footer";
+        "header"
+        "content"
+        "footer";
     height: 100vh;
-}
-
-aside.logo {
-    grid-area: logo;
 }
 
 header.header {

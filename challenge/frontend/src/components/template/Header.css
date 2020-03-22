@@ -1,0 +1,40 @@
+header.header {
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: var(--logo-width) 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "logo menu";
+    box-shadow: var(--shadow);
+}
+
+header nav.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav.logo img {
+    padding: 0px 15px;
+    width: 100%;
+}
+
+header nav.menu {
+    grid-area: menu;
+    text-align: end;
+    margin-top: 22px;
+}
+
+header nav.menu a {
+    color: rgba(19, 22, 26, 0.842);
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+header nav.menu a:hover {
+    background: linear-gradient(135deg, #07A7E3 0%, #32DAC3 100%);
+}
