@@ -1,28 +1,30 @@
-const express = require('express')
-const axios = require('axios')
-const bodyParser = require('body-parser')
+const Express = require('express')
+const Axios = require('axios')
+const BodyParser = require('body-parser')
+const Teste = require('../service/numberFunctions.js')
 
-const app = express()
+const app = Express()
 const port = 4002
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(BodyParser.urlencoded({ extended: true }))
 
 app.get('/api/mensagem', (req, res) => {
-    res.send({ express: 'Teste' })
+    res.send({ Express: 'Teste' })
 })
 
 app.post('/api/divisores', (req, res) => {
-    let arrayDividers = []
-    const number = parseInt(req.body.number)
-    for (let i=1; i <= number/2; i++){
-        if (number%i == 0) {
-            arrayDividers.push(i)
-        }
-    }
-    arrayDividers.push(number)
-    console.log(number)
-    console.log(arrayDividers)
-    res.send(arrayDividers)
+    // let arrayDividers = []
+    // const number = parseInt(req.body.number)
+    // for (let i=1; i <= number/2; i++){
+    //     if (number%i == 0) {
+    //         arrayDividers.push(i)
+    //     }
+    // }
+    // arrayDividers.push(number)
+    Teste.dividers()
+    array = NumberFunctions.dividers(req.body.number)
+    console.log(array)
+    res.send(array)
 })
 
 app.get('/api/teste', (req, res) => {
@@ -32,10 +34,14 @@ app.get('/api/teste', (req, res) => {
         'primo': true,
         'divisores': [1, 3]
     }
-    axios.post(url, teste).then(resp => {
+    Axios.post(url, teste).then(resp => {
         console.log(resp.status)
     })
     res.send(req.statusMessage)
 })
 
 app.listen(port, () => console.log(`Servidor rodando e escutando na porta ${port}`))
+
+
+let lal = Teste.dividers(10)
+console.log(lal)
