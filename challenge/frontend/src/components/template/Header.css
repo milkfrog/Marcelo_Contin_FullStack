@@ -23,7 +23,7 @@ header nav.logo img {
 header nav.menu {
     grid-area: menu;
     text-align: end;
-    margin-top: 22px;
+    margin-top: 14px;
 }
 
 header nav.menu a {

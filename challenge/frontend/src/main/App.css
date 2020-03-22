@@ -1,7 +1,7 @@
 :root {
-    --logo-menu-height: 100px;
+    --logo-menu-height: 80px;
     --logo-width: 225px;
-    --footer-height: 80px;
+    --footer-height: 60px;
 
     --shadow:
         0 2px 23px 0 rgba(0, 0, 0, 0.1),
