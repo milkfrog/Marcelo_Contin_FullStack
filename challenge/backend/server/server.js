@@ -1,16 +1,19 @@
-const Express = require('express')
-const Axios = require('axios')
-const BodyParser = require('body-parser')
-const NumberFunctions = require('../service/numberFunctions')
+const express = require('express')
+const axios = require('axios')
+const bodyParser = require('body-parser')
+const numberFunctions = require('../service/numberFunctions')
+const cors = require('cors')
 
-const app = Express()
+const app = express()
 const port = 4002
 
-app.use(BodyParser.urlencoded({ extended: true }))
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.get('/divisores', (req, res) => {
     const url = 'http://localhost:4001/valores'
-    Axios.get(url).then(response => {
+    axios.get(url).then(response => {
         console.log(response.data)
         res.send(response.data)
     })
@@ -18,8 +21,10 @@ app.get('/divisores', (req, res) => {
 
 app.post('/divisores', (req, res) => {
     const url = 'http://localhost:4001/valores'
-    const object = NumberFunctions.verifyNumber(req.body.number) 
-    Axios.post(url, object).then(response => {
+    console.log(req.body.number)
+    const object = numberFunctions.verifyNumber(req.body.number) 
+    console.log(object)
+    axios.post(url, object).then(response => {
         res.send(object)
     }).catch(() => res.send('erro'))
 })

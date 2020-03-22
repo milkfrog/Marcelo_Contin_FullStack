@@ -10,7 +10,8 @@ const initialState = {
         number: '',
         listDividers: [],
         isPrime: ''
-    }
+    },
+    list: []
 }
 
 
@@ -20,24 +21,25 @@ export default class Desafio extends Component {
     save() {
         const values = this.state.values
         const url = baseUrl
-        console.log($.param(values))
         axios.post(url, $.param(values))
             .then(resp => {
-                console.log(resp.data.prime)
-                console.log(resp.data.dividers)
                 const values = { ...this.state.values}
                 values.isPrime = resp.data.prime
                 values.listDividers = resp.data.dividers
                 this.setState({ values })
-                console.log(this.state.values)
+                axios.get(url).then(resp2 => {
+                    this.setState({ list: resp2.data })
+                })
             })
     }
 
-    updateNumber(event) {
+    updateField(event) {
         const values = { ...this.state.values}
         values[event.target.name] = event.target.value
         this.setState({ values })
     }
+
+    
 
     renderForm() {
         return (
@@ -49,7 +51,7 @@ export default class Desafio extends Component {
                             <input type="text" className="form-control" 
                                 name="number"
                                 value={this.state.number}
-                                onChange={e => this.updateNumber(e)}
+                                onChange={e => this.updateField(e)}
                                 placeholder="Digite o número Inteiro"/>
                         </div>
                     </div>
@@ -57,8 +59,9 @@ export default class Desafio extends Component {
                         <div className="form-group">
                             <label>É primo?</label>
                             <input type="text" className="form-control readonly"
-                                name="prime"
+                                name="isPrime"
                                 value={this.state.values.isPrime}
+                                onChange={e => null}
                                 placeholder="É Primo?"/>
                         </div>
                     </div>
@@ -68,7 +71,8 @@ export default class Desafio extends Component {
                         <div className="form-group">
                             <label>Lista de divisores</label>
                             <input type="text" className="form-control readonly"
-                                name="dividers"
+                                name="listDividers"
+                                onChange={e => null}
                                 value={this.state.values.listDividers}
                                 placeholder="Lista de divisores"/>
                         </div>
@@ -81,10 +85,40 @@ export default class Desafio extends Component {
                             onClick={e => this.save(e)}>
                             Verificar
                         </button>
+
                     </div>
                 </div>
             </div>
         )
+    }
+
+    renderTable() {
+        return (
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>É Primo?</th>
+                        <th>Divisores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+
+    renderRows() {
+        return this.state.list.map(valor => {
+            return (
+                <tr key={valor.id}>
+                    <td>{valor.number}</td>
+                    <td>{valor.prime ? 'true': 'false'}</td>
+                    <td>{valor.dividers}</td>
+                </tr>
+            )
+        })
     }
 
     render() {
@@ -95,6 +129,7 @@ export default class Desafio extends Component {
                     <p>Entre com um número inteiro para descobrir seus divisores e se ele é um número primo</p>
                     {this.renderForm()}
                     <h1>Histórico de Pesquisas</h1>
+                    {this.renderTable()}
                 </div>
             </main>
         )

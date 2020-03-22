@@ -20,35 +20,32 @@
       "id": 1
     },
     {
-      "number": "49",
-      "dividers": [
-        1,
-        7,
-        49
-      ],
-      "prime": false,
-      "id": 2
-    },
-    {
       "number": "11",
       "dividers": [
         1,
         11
       ],
       "prime": true,
+      "id": 2
+    },
+    {
+      "number": "15",
+      "dividers": [
+        1,
+        3,
+        5,
+        15
+      ],
+      "prime": false,
       "id": 3
     },
     {
-      "number": "50",
+      "number": "79",
       "dividers": [
         1,
-        2,
-        5,
-        10,
-        25,
-        50
+        79
       ],
-      "prime": false,
+      "prime": true,
       "id": 4
     }
   ]
