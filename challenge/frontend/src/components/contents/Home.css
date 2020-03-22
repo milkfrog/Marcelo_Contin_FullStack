@@ -1,5 +1,5 @@
 div h1, h3 {
-    color: rgba(19, 22, 26, 0.842);;
+    color: var(--color-font);
 }
 
 main {
