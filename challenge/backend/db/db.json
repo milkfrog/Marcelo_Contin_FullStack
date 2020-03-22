@@ -37,6 +37,19 @@
       ],
       "prime": true,
       "id": 3
+    },
+    {
+      "number": "50",
+      "dividers": [
+        1,
+        2,
+        5,
+        10,
+        25,
+        50
+      ],
+      "prime": false,
+      "id": 4
     }
   ]
 }
