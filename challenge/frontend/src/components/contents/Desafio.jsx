@@ -115,7 +115,7 @@ export default class Desafio extends Component {
     }
 
     renderRows() {
-        return this.state.list.map(valor => {
+        return this.state.list.reverse().map(valor => {
             return (
                 <tr key={valor.id}>
                     <td>{valor.number}</td>
