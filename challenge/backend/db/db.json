@@ -47,6 +47,59 @@
       ],
       "prime": true,
       "id": 4
+    },
+    {
+      "number": "13",
+      "dividers": [
+        1,
+        13
+      ],
+      "prime": true,
+      "id": 5
+    },
+    {
+      "number": "17",
+      "dividers": [
+        1,
+        17
+      ],
+      "prime": true,
+      "id": 6
+    },
+    {
+      "number": "20",
+      "dividers": [
+        1,
+        2,
+        4,
+        5,
+        10,
+        20
+      ],
+      "prime": false,
+      "id": 7
+    },
+    {
+      "number": "75",
+      "dividers": [
+        1,
+        3,
+        5,
+        15,
+        25,
+        75
+      ],
+      "prime": false,
+      "id": 8
+    },
+    {
+      "number": "373",
+      "dividers": [
+        1,
+        373
+      ],
+      "prime": true,
+      "id": 9
     }
   ]
 }

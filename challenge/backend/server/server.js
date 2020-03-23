@@ -7,6 +7,8 @@ const cors = require('cors')
 const app = express()
 const port = 4002
 
+// axios.default.timeout = 1
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -14,10 +16,11 @@ app.use(bodyParser.json())
 app.get('/divisores', (req, res) => {
     const url = 'http://localhost:4001/valores'
     axios.get(url).then(response => {
-        console.log(response.data)
         res.send(response.data)
-    })
+    }).catch(() => res.send('error'))
 })
+
+
 
 app.post('/divisores', (req, res) => {
     const url = 'http://localhost:4001/valores'
@@ -26,7 +29,7 @@ app.post('/divisores', (req, res) => {
     console.log(object)
     axios.post(url, object).then(response => {
         res.send(object)
-    }).catch(() => res.send('erro'))
+    }).catch(() => res.send('error'))
 })
 
 app.listen(port, () => console.log(`Servidor rodando e escutando na porta ${port}`))
