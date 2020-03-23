@@ -126,6 +126,15 @@
       ],
       "prime": false,
       "id": 11
+    },
+    {
+      "number": "23",
+      "dividers": [
+        1,
+        23
+      ],
+      "prime": true,
+      "id": 12
     }
   ]
 }

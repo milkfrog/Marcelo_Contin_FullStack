@@ -2,6 +2,11 @@
 > Projeto desenvolvido por Marcelo Contin no processo seletivo do **Laboratório Bridge**.  
 O mesmo consiste em criar uma aplicação web que através de um formulário simples, submeta um número e mostre a lista de divisores e se o número é primo.
 
+# Tentativa de rodar no Heroku
+Cheguei a fazer o deploy no Heroku, porém não consegui a tempo fazer as devidas modificações de PORT pra que ele conseguisse se comunicar entre o front e o back.  
+Mas de qualquer forma ele gerou o Front pelo menos :satisfied:  
+Mas para ver a aplicação funcionando corretamente é necessário instalar localmente.
+
 # Tecnologias
 A linguagem utilizada foi o JavaScript (tanto para back, como para front) a partir do Node.js
 
