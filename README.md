@@ -29,26 +29,26 @@ Utilizado para simular um banco de dados, a fim de persistir os dados pesquisado
 
 # Instalando bibliotecas (sistemas Linux)
 Assumindo que você tenha instalado o node e o react.  
-Acessar via terminal a pasta challenge/frontend e rodar:
+Acessar via terminal a pasta /client e rodar:
 ````
     sudo npm i
 ````
-Após finalizar acessar a pasta challenge/backend e rodar:
+Após finalizar acessar a pasta raiz e rodar:
 ````
     sudo npm i
 ````
 Finalizando basta levantar os ambientes a seguir.
 ## Back
-Abrir 1 terminal e acessar a pasta challenge/backend e rodar o seguinte:
+Abrir 1 terminal e acessar a pasta raiz e rodar o seguinte:
 ````
     sudo npm run db
 ````
-Abrir outro terminal e acessar a pasta challenge/backend e rodar o seguinte:
+Abrir outro terminal e acessar a pasta raiz e rodar o seguinte:
 ````
     sudo npm run server
 ````
 ## Front
-Abrir outro terminal e acessar a pasta challenge/frontend e rodar o seguinte:
+Abrir outro terminal e acessar a pasta /client e rodar o seguinte:
 ````
     sudo npm start
 ````
