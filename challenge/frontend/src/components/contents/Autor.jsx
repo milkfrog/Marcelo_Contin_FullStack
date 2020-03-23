@@ -6,7 +6,7 @@ import pdf from '../assets/cv/cv_marcelo_contin.pdf'
 export default props =>
         <main>
             <div className="container">
-                <h1 className="mt-5">Links sobre <strong>Marcelo Contin</strong>.</h1>
+                <h1 className="mt-5 titulo">Autor</h1>
                 <div className="autor">
                     <img className="fotoMarcelo" src={imagemMarcelo} alt="Foto Marcelo Contin"/>
                     <div className="links">

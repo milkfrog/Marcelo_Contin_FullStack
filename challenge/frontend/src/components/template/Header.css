@@ -13,6 +13,7 @@ header nav.logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 header nav.logo img {
@@ -35,6 +36,36 @@ header nav.menu a {
     padding: 15px;
 }
 
+div.dropdown {
+    visibility: hidden;
+}
+
 header nav.menu a:hover {
     background: linear-gradient(135deg, #07A7E3 0%, #32DAC3 100%);
+}
+
+@media(max-width: 768px) {
+    header nav.logo {
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    
+    div.dropdown {
+        top: -55px;
+        margin-right: 5px;
+        visibility: visible;
+        grid-area: drop;
+    }
+    div.menuGrande {
+        visibility: hidden;
+    }
+
+    header.header {
+        display: grid;
+        grid-template-columns: var(--logo-width) 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "logo drop";
+        box-shadow: var(--shadow);
+    }
 }

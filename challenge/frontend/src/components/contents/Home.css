@@ -5,3 +5,9 @@ div h1, h3 {
 main {
     background-color: rgba(211, 211, 211, 0.349);
 }
+
+@media(max-width: 534px) {
+    div.dropdown {
+        top: -82px;
+    }
+}

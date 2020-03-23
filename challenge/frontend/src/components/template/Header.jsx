@@ -2,6 +2,8 @@ import './Header.css'
 import React from 'react'
 import NavItem from './NavItem'
 import { Link } from 'react-router-dom'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 export default props =>
     <header className="header">
@@ -12,8 +14,17 @@ export default props =>
         </Link>
         </nav>
         <nav className="menu">
-            <NavItem href="/" classIcon="fas fa-home" title="Home"/>
-            <NavItem href="/desafio" classIcon="fas fa-laptop-code" title="Desafio"/>
-            <NavItem href="/autor" classIcon="fas fa-at" title="Autor"/>
+            <div className="menuGrande">
+                <NavItem href="/" classIcon="fas fa-home" title="Home"/>
+                <NavItem href="/desafio" classIcon="fas fa-laptop-code" title="Desafio"/>
+                <NavItem href="/autor" classIcon="fas fa-at" title="Autor"/>
+            </div>
+            <div className="dropdown">
+                <DropdownButton id="dropdown-basic-button" title="">
+                    <Dropdown.Item href="/">Home</Dropdown.Item>
+                    <Dropdown.Item href="/desafio">Desafio</Dropdown.Item>
+                    <Dropdown.Item href="/autor">Autor</Dropdown.Item>
+                </DropdownButton>
+            </div>
         </nav>
     </header>
