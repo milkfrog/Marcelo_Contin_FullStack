@@ -1,3 +1,88 @@
-main a.socials {
-    font-size: 200px;
+a.socials {
+    font-size: 100px;
+    color: var(--color-font)
+}
+
+span.texto {
+    font-size: 40px;
+    vertical-align: 40%;
+}
+
+div.autor {  
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "foto links";
+}
+
+div.links {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 155px 155px 155px;
+    grid-template-areas: 
+        "linkedin"
+        "cv"
+        "git";
+}
+
+a.linkedin {
+    grid-area: linkedin;
+    text-decoration: none;
+}
+
+a.cv {
+    grid-area: cv;
+    text-decoration: none;
+}
+
+a.github {
+    grid-area: git;
+    text-decoration: none;
+}
+
+img.fotoMarcelo {
+    width: 350px;
+    grid-area: foto;
+}
+
+div.links {
+    grid-area: links;
+}
+
+@media(max-width: 768px) {
+
+    a.linkedin {
+        text-align: center;
+    }
+    
+    a.cv {
+        text-align: center;
+    }
+    
+    a.github {
+        text-align: center;
+    }
+
+    div.autor {  
+        display: grid;
+        grid-template-columns: 370px 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "links links";
+    }
+    img.fotoMarcelo {
+        visibility: hidden;
+    }
+    
+    div.links {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 155px 155px 155px;
+        grid-template-areas: 
+            "linkedin"
+            "cv"
+            "git";
+    }
 }
