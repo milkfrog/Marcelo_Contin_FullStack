@@ -18,19 +18,19 @@ export default props =>
                 de divisores desse número e se o mesmo é um número primo.
             </p>
             <ul>
-                <li>O sistema deve possuir uma tela com um campo de texto e botão.</li>
-                <li>Ao clicar no botão, os dados devem ser enviados ao backend para os cálculos.</li>
-                <li>O resultado deve ser exibido na tela.</li>
-                <li>Os cálculos dos divisores e do número primo devem ser executados pelo backend.</li>
+                <li>O sistema deve possuir uma tela com um campo de texto e botão. <i className="fas fa-check"></i></li>
+                <li>Ao clicar no botão, os dados devem ser enviados ao backend para os cálculos. <i className="fas fa-check"></i></li>
+                <li>O resultado deve ser exibido na tela. <i className="fas fa-check"></i></li>
+                <li>Os cálculos dos divisores e do número primo devem ser executados pelo backend. <i className="fas fa-check"></i></li>
                 <li>Estilize as páginas utilizando a ferramenta/biblioteca CSS de sua preferência. 
-                    Nós julgaremos a usabilidade das telas e componentes.</li>
+                    Nós julgaremos a usabilidade das telas e componentes. <i className="fas fa-check"></i></li>
                 <li>Crie um README explicando as tecnologias e principais bibliotecas utilizadas em sua solução.
-                    Adicione também diretivas de como executar seu projeto localmente.</li>
+                    Adicione também diretivas de como executar seu projeto localmente. <i className="fas fa-check"></i></li>
             </ul>
             <h3>Bônus</h3>
             <ul>
                 <li>Publique sua solução em um cloud provider (exemplo: Heroku) e nos forneça o link de acesso.</li>
-                <li>Salve um histórico dos números submetidos.</li>
+                <li>Salve um histórico dos números submetidos. <i className="fas fa-check"></i></li>
             </ul>
         </div>
     </main>
