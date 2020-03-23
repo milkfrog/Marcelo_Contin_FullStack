@@ -3,7 +3,7 @@
 O mesmo consiste em criar uma aplicação web que através de um formulário simples, submeta um número e mostre a lista de divisores e se o número é primo.
 
 # Tecnologias
-A linguagem utilizada foi o JavaScript (tanto para back, como para front).  
+A linguagem utilizada foi o JavaScript (tanto para back, como para front) a partir do Node.js
 
 ## Tecnologias utilizadas no Front
 * React
