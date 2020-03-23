@@ -52,4 +52,4 @@ Abrir outro terminal e acessar a pasta /client e rodar o seguinte:
 ````
     sudo npm start
 ````
-A aplicação estará rodando em **localhost:4003**
+A aplicação estará rodando em **http://localhost:3000/**

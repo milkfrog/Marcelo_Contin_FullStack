@@ -85,6 +85,47 @@
       ],
       "prime": false,
       "id": 7
+    },
+    {
+      "number": "25",
+      "dividers": [
+        1,
+        5,
+        25
+      ],
+      "prime": false,
+      "id": 8
+    },
+    {
+      "number": "566",
+      "dividers": [
+        1,
+        2,
+        283,
+        566
+      ],
+      "prime": false,
+      "id": 9
+    },
+    {
+      "number": "23",
+      "dividers": [
+        1,
+        23
+      ],
+      "prime": true,
+      "id": 10
+    },
+    {
+      "number": "5234",
+      "dividers": [
+        1,
+        2,
+        2617,
+        5234
+      ],
+      "prime": false,
+      "id": 11
     }
   ]
 }
