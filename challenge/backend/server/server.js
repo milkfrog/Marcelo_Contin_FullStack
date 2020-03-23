@@ -7,8 +7,6 @@ const cors = require('cors')
 const app = express()
 const port = 4002
 
-// axios.default.timeout = 1
-
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())

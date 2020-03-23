@@ -14,7 +14,6 @@ const initialState = {
     list: []
 }
 
-
 export default class Desafio extends Component {
     state = { ...initialState }
 
@@ -36,7 +35,7 @@ export default class Desafio extends Component {
     }
 
     getList() {
-        axios.get(baseUrl, { timeout: 500 }).then(resp2 => {
+        axios.get(baseUrl, {timeout: 500 }).then(resp2 => {
             this.setState({ list: resp2.data })
         })
     }
@@ -46,8 +45,6 @@ export default class Desafio extends Component {
         values[event.target.name] = event.target.value
         this.setState({ values })
     }
-
-    
 
     renderForm() {
         return (
